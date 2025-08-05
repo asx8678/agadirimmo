@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
+
+  # Use local disk for Active Storage in test to avoid external dependencies
+  config.active_storage.service = :test
 end

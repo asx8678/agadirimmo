@@ -1,5 +1,6 @@
 class Apartment < ApplicationRecord
   belongs_to :user
+  has_many_attached :photos
 
   enum :status, { draft: "draft", published: "published" }, prefix: true
 

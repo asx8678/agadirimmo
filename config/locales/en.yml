@@ -29,3 +29,64 @@
 
 en:
   hello: "Hello world"
+  app:
+    name: Agimmo
+    nav:
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      sign_up: "Sign up"
+      apartments: "Apartments"
+  apartments:
+    index:
+      title: "Apartments"
+      toggle_list: "Toggle list"
+      map_aria: "Map showing apartments"
+      list_title: "Apartments"
+    new:
+      title: "New apartment"
+    edit:
+      title: "Edit apartment"
+    form:
+      title: "Title"
+      title_placeholder: "Enter apartment title"
+      description: "Description"
+      description_placeholder: "Describe your apartment"
+      latitude: "Latitude"
+      longitude: "Longitude"
+      price_cents: "Price (PLN in cents)"
+      city: "City"
+      address: "Address"
+      photos: "Photos"
+      submit: "Save apartment"
+      errors_title: "Please fix the following errors"
+    show:
+      photos: "Photos"
+      no_photos: "No photos uploaded"
+      city: "City"
+      address: "Address"
+      price: "Price"
+      location: "Location"
+      rooms: "Rooms"
+      size: "Size"
+      floor: "Floor"
+      edit: "Edit"
+      delete: "Delete"
+      delete_confirm: "Are you sure you want to delete this apartment?"
+  auth:
+    sign_in:
+      title: "Sign in"
+      email: "Email"
+      password: "Password"
+      submit: "Sign in"
+    sign_up:
+      title: "Sign up"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      submit: "Create account"
+  nav:
+    home: "Home"
+    new_apartment: "New Apartment"
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    sign_up: "Sign up"

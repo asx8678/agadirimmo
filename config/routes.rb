@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get "apartments/index"
-  get "apartments/show"
-  get "apartments/new"
-  get "apartments/edit"
   root "apartments#index"
 
   resources :apartments

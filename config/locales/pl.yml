@@ -1,0 +1,62 @@
+pl:
+  app:
+    name: Agimmo
+    nav:
+      sign_in: "Zaloguj"
+      sign_out: "Wyloguj"
+      sign_up: "Zarejestruj"
+      apartments: "Mieszkania"
+  apartments:
+    index:
+      title: "Mieszkania"
+      toggle_list: "Pokaż/Ukryj listę"
+      map_aria: "Mapa pokazująca mieszkania"
+      list_title: "Mieszkania"
+    new:
+      title: "Nowe mieszkanie"
+    edit:
+      title: "Edytuj mieszkanie"
+    form:
+      title: "Tytuł"
+      title_placeholder: "Wprowadź tytuł mieszkania"
+      description: "Opis"
+      description_placeholder: "Opisz swoje mieszkanie"
+      latitude: "Szerokość geogr."
+      longitude: "Długość geogr."
+      price_cents: "Cena (PLN w groszach)"
+      city: "Miasto"
+      address: "Adres"
+      photos: "Zdjęcia"
+      submit: "Zapisz mieszkanie"
+      errors_title: "Proszę poprawić następujące błędy"
+    show:
+      photos: "Zdjęcia"
+      no_photos: "Brak wgranych zdjęć"
+      city: "Miasto"
+      address: "Adres"
+      price: "Cena"
+      location: "Lokalizacja"
+      rooms: "Pokoje"
+      size: "Wielkość"
+      floor: "Piętro"
+      edit: "Edytuj"
+      delete: "Usuń"
+      delete_confirm: "Czy na pewno chcesz usunąć to mieszkanie?"
+  auth:
+    sign_in:
+      title: "Logowanie"
+      email: "Email"
+      password: "Hasło"  
+      submit: "Zaloguj"
+    sign_up:
+      title: "Rejestracja"
+      email: "Email"
+      password: "Hasło"
+      password_confirmation: "Potwierdzenie hasła"
+      submit: "Utwórz konto"
+  nav:
+    home: "Strona główna"
+    new_apartment: "Nowe mieszkanie"
+    sign_in: "Zaloguj"
+    sign_out: "Wyloguj"
+    sign_up: "Zarejestruj"

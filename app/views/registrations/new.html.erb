@@ -1,22 +1,21 @@
-<h1>Sign up</h1>
-
-<%= form_with model: @user, url: sign_up_path, scope: :user do |f| %>
-  <div>
-    <%= f.label :email %><br>
-    <%= f.email_field :email, required: true, autofocus: true %>
+<%= form_with url: sign_up_path, scope: :user do |f| %>
+  <h1><%= t("auth.sign_up.title") %></h1>
+  <div class="field">
+    <%= f.label :email, t("auth.sign_up.email") %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
-  <div>
-    <%= f.label :password %><br>
-    <%= f.password_field :password, required: true %>
+  <div class="field">
+    <%= f.label :password, t("auth.sign_up.password") %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, required: true %>
+  <div class="field">
+    <%= f.label :password_confirmation, t("auth.sign_up.password_confirmation", default: "Password confirmation") %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div>
-    <%= f.submit "Create account" %>
+  <div class="actions">
+    <%= f.submit t("auth.sign_up.submit") %>
   </div>
 <% end %>

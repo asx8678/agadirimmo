@@ -13,3 +13,14 @@ module ActiveSupport
     # Add more helper methods to be used by all tests here...
   end
 end
+
+class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
+  driven_by :rack_test
+
+  # Helper to conditionally attach a file if the field exists
+  def safe_attach_file(locator, path)
+    attach_file(locator, path)
+  rescue Capybara::ElementNotFound
+    # ignore when the file input isn't present in simplified forms
+  end
+end

@@ -1,0 +1,57 @@
+<%= form_with(model: apartment) do |f| %>
+  <% if apartment.errors.any? %>
+    <div class="errors">
+      <h2><%= t("apartments.form.errors_title", count: apartment.errors.count) %></h2>
+      <ul>
+        <% apartment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, t("apartments.form.title") %>
+    <%= f.text_field :title, placeholder: t("apartments.form.title_placeholder") %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, t("apartments.form.description") %>
+    <%= f.text_area :description, placeholder: t("apartments.form.description_placeholder") %>
+  </div>
+
+  <div class="field-group">
+    <div class="field">
+      <%= f.label :latitude, t("apartments.form.latitude") %>
+      <%= f.number_field :latitude, step: :any %>
+    </div>
+    <div class="field">
+      <%= f.label :longitude, t("apartments.form.longitude") %>
+      <%= f.number_field :longitude, step: :any %>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <div class="field">
+      <%= f.label :price_cents, t("apartments.form.price_cents") %>
+      <%= f.number_field :price_cents, step: 1 %>
+    </div>
+    <div class="field">
+      <%= f.label :city, t("apartments.form.city") %>
+      <%= f.text_field :city %>
+    </div>
+    <div class="field">
+      <%= f.label :address, t("apartments.form.address") %>
+      <%= f.text_field :address %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :photos, t("apartments.form.photos") %>
+    <%= f.file_field :photos, multiple: true, direct_upload: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t("apartments.form.submit") %>
+  </div>
+<% end %>

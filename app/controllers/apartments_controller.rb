@@ -71,16 +71,9 @@ class ApartmentsController < ApplicationController
   def apartment_params
     params.require(:apartment).permit(
       :title, :description, :latitude, :longitude, :price_cents, :size_sqm, :rooms,
-      :address, :city, :country, :floor, :year_built, :amenities, :status, :available_from
+      :address, :city, :country, :floor, :year_built, :amenities, :status, :available_from,
+      photos: []
     )
   end
 
-  def require_sign_in!
-    redirect_to sign_in_path, alert: "Please sign in" unless current_user
-  end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
-  end
-  helper_method :current_user
 end

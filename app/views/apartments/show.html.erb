@@ -1,2 +1,52 @@
-<h1>Apartments#show</h1>
-<p>Find me in app/views/apartments/show.html.erb</p>
+<section class="apartment-details">
+  <h1><%= @apartment.title %></h1>
+  <p class="description"><%= @apartment.description %></p>
+
+  <div class="meta">
+    <div><strong><%= t("apartments.show.city") %>:</strong> <%= @apartment.city %></div>
+    <div><strong><%= t("apartments.show.address") %>:</strong> <%= @apartment.address %></div>
+    <div><strong><%= t("apartments.show.price") %>:</strong> <%= number_to_currency(@apartment.price_cents / 100.0) %></div>
+    <% if @apartment.rooms.present? %>
+      <div><strong><%= t("apartments.show.rooms", default: "Rooms") %>:</strong> <%= @apartment.rooms %></div>
+    <% end %>
+    <% if @apartment.size_sqm.present? %>
+      <div><strong><%= t("apartments.show.size", default: "Size") %>:</strong> <%= @apartment.size_sqm %> m²</div>
+    <% end %>
+    <% if @apartment.floor.present? %>
+      <div><strong><%= t("apartments.show.floor", default: "Floor") %>:</strong> <%= @apartment.floor %></div>
+    <% end %>
+  </div>
+</section>
+
+<section class="mini-map">
+  <h2><%= t("apartments.show.location") %></h2>
+  <div id="mini-map" 
+       data-controller="apartment-map" 
+       data-apartment-map-latitude-value="<%= @apartment.latitude || 0 %>"
+       data-apartment-map-longitude-value="<%= @apartment.longitude || 0 %>">
+  </div>
+</section>
+
+<section class="gallery">
+  <h2><%= t("apartments.show.photos") %></h2>
+  <% if @apartment.photos.attached? %>
+    <div class="photo-grid">
+      <% @apartment.photos.each do |photo| %>
+        <div class="photo">
+          <%= image_tag photo, alt: @apartment.title %>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="empty"><%= t("apartments.show.no_photos") %></p>
+  <% end %>
+</section>
+
+<% if current_user == @apartment.user %>
+  <section style="margin: 20px; display: flex; gap: 12px;">
+    <%= link_to t("apartments.show.edit", default: "Edit"), edit_apartment_path(@apartment), class: "btn btn-secondary" %>
+    <%= button_to t("apartments.show.delete", default: "Delete"), apartment_path(@apartment), method: :delete, 
+        class: "btn", style: "background: var(--danger)", 
+        confirm: t("apartments.show.delete_confirm", default: "Are you sure?") %>
+  </section>
+<% end %>
