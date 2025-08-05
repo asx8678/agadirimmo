@@ -4,7 +4,23 @@ class ApartmentsController < ApplicationController
   before_action :authorize_owner!, only: [:edit, :update, :destroy]
 
   def index
-    @apartments = Apartment.where(status: "published").order(created_at: :desc)
+    scope = Apartment.where(status: "published")
+    # Optional bounding box filtering for map viewport
+    if params[:north].present? && params[:south].present? && params[:east].present? && params[:west].present?
+      north = params[:north].to_f
+      south = params[:south].to_f
+      east  = params[:east].to_f
+      west  = params[:west].to_f
+      scope = scope.where(latitude: south..north).where(longitude: west..east)
+    end
+    @apartments = scope.order(created_at: :desc)
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @apartments.select(:id, :title, :latitude, :longitude, :price_cents, :city)
+      end
+    end
   end
 
   def show

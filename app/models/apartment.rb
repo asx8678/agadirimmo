@@ -1,4 +1,4 @@
-class Apartment &lt; ApplicationRecord
+class Apartment < ApplicationRecord
   belongs_to :user
 
   enum :status, { draft: "draft", published: "published" }, prefix: true

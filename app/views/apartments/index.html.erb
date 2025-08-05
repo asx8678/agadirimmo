@@ -1,2 +1,12 @@
 <h1>Apartments#index</h1>
 <p>Find me in app/views/apartments/index.html.erb</p>
+<div data-controller="map" style="display:flex; height: calc(100vh - 60px);">
+  <div data-map-target="listPanel" class="list-panel" style="width:320px; border-right:1px solid #ddd; overflow:auto; padding:8px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+      <h2 style="margin:0;">Listings</h2>
+      <button data-action="map#toggle" style="padding:4px 8px;">Toggle</button>
+    </div>
+    <div class="apt-list"></div>
+  </div>
+  <div data-map-target="canvas" style="flex:1;"></div>
+</div>
