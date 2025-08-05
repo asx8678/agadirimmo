@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_05_121613) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_05_121835) do
+  create_table "active_storage_tables", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "apartments", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "title"
