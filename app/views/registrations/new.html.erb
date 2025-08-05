@@ -1,2 +1,22 @@
-<h1>Registrations#new</h1>
-<p>Find me in app/views/registrations/new.html.erb</p>
+<h1>Sign up</h1>
+
+<%= form_with model: @user, url: sign_up_path, scope: :user do |f| %>
+  <div>
+    <%= f.label :email %><br>
+    <%= f.email_field :email, required: true, autofocus: true %>
+  </div>
+
+  <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, required: true %>
+  </div>
+
+  <div>
+    <%= f.submit "Create account" %>
+  </div>
+<% end %>

@@ -10,5 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 0) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_05_121613) do
+  create_table "apartments", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "title"
+    t.text "description"
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.integer "price_cents"
+    t.integer "size_sqm"
+    t.integer "rooms"
+    t.string "address"
+    t.string "city"
+    t.string "country"
+    t.integer "floor"
+    t.integer "year_built"
+    t.text "amenities"
+    t.string "status"
+    t.date "available_from"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_apartments_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.boolean "admin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "apartments", "users"
 end

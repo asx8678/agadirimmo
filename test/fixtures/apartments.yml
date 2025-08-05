@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  title: MyString
+  description: MyText
+  latitude: 9.99
+  longitude: 9.99
+  price_cents: 1
+  size_sqm: 1
+  rooms: 1
+  address: MyString
+  city: MyString
+  country: MyString
+  floor: 1
+  year_built: 1
+  amenities: MyText
+  status: MyString
+  available_from: 2025-08-05
+
+two:
+  user: two
+  title: MyString
+  description: MyText
+  latitude: 9.99
+  longitude: 9.99
+  price_cents: 1
+  size_sqm: 1
+  rooms: 1
+  address: MyString
+  city: MyString
+  country: MyString
+  floor: 1
+  year_built: 1
+  amenities: MyText
+  status: MyString
+  available_from: 2025-08-05
