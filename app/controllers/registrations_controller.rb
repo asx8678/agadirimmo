@@ -6,7 +6,10 @@ class RegistrationsController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      # Reset session for security
+      reset_session
       session[:user_id] = @user.id
+      session[:expires_at] = 24.hours.from_now
       redirect_to root_path, notice: "Signed up successfully"
     else
       flash.now[:alert] = @user.errors.full_messages.to_sentence

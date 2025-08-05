@@ -5,7 +5,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params.dig(:session, :email))
     if user&.authenticate(params.dig(:session, :password))
+      # Reset session for security (prevent session fixation)
+      reset_session
       session[:user_id] = user.id
+      session[:expires_at] = 24.hours.from_now
       redirect_to root_path, notice: "Signed in successfully"
     else
       flash.now[:alert] = "Invalid email or password"
@@ -14,7 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete(:user_id)
+    reset_session
     redirect_to root_path, notice: "Signed out"
   end
 end

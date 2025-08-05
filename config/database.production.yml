@@ -1,0 +1,39 @@
+# Production database configuration
+# For production use, consider PostgreSQL instead of SQLite
+# 
+# To use PostgreSQL, add to Gemfile:
+# gem 'pg', '~> 1.1'
+# 
+# Then use this configuration:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: agimmo_app_production
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  port: <%= ENV['DATABASE_PORT'] || 5432 %>
+  # Enable SSL for production
+  sslmode: require
+  
+# Alternative: If you must use SQLite in production (not recommended for multi-user apps)
+# production:
+#   primary:
+#     adapter: sqlite3
+#     database: storage/production.sqlite3
+#     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#     timeout: 5000
+#   cache:
+#     adapter: sqlite3
+#     database: storage/production_cache.sqlite3
+#     migrations_paths: db/cache_migrate
+#   queue:
+#     adapter: sqlite3
+#     database: storage/production_queue.sqlite3
+#     migrations_paths: db/queue_migrate
+#   cable:
+#     adapter: sqlite3
+#     database: storage/production_cable.sqlite3
+#     migrations_paths: db/cable_migrate
