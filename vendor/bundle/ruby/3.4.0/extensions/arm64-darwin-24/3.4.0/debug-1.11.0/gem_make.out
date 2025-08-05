@@ -1,0 +1,19 @@
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5vag4u sitelibdir\=./.gem.20250805-22359-5vag4u clean
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5vag4u sitelibdir\=./.gem.20250805-22359-5vag4u
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5vag4u sitelibdir\=./.gem.20250805-22359-5vag4u install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20250805-22359-5vag4u/debug
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5vag4u sitelibdir\=./.gem.20250805-22359-5vag4u clean

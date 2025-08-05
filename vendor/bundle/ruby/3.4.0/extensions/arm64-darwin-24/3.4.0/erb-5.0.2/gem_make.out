@@ -1,0 +1,19 @@
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-oevxxl sitelibdir\=./.gem.20250805-22359-oevxxl clean
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-oevxxl sitelibdir\=./.gem.20250805-22359-oevxxl
+compiling escape.c
+linking shared-object erb/escape.bundle
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-oevxxl sitelibdir\=./.gem.20250805-22359-oevxxl install
+/usr/bin/install -c -m 0755 escape.bundle ./.gem.20250805-22359-oevxxl/erb
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-oevxxl sitelibdir\=./.gem.20250805-22359-oevxxl clean

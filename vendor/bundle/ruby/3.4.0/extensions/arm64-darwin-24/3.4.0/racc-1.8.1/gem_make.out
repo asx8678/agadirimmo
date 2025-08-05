@@ -1,0 +1,18 @@
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5a8xbc sitelibdir\=./.gem.20250805-22359-5a8xbc clean
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5a8xbc sitelibdir\=./.gem.20250805-22359-5a8xbc
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5a8xbc sitelibdir\=./.gem.20250805-22359-5a8xbc install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250805-22359-5a8xbc/racc
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-5a8xbc sitelibdir\=./.gem.20250805-22359-5a8xbc clean

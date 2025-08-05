@@ -1,0 +1,18 @@
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-fbjqik sitelibdir\=./.gem.20250805-22359-fbjqik clean
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-fbjqik sitelibdir\=./.gem.20250805-22359-fbjqik
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-fbjqik sitelibdir\=./.gem.20250805-22359-fbjqik install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20250805-22359-fbjqik/skiptrace/internal
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-fbjqik sitelibdir\=./.gem.20250805-22359-fbjqik clean

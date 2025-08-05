@@ -1,0 +1,31 @@
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+checking for pkg-config for yaml-0.1... not found
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-hrot4o sitelibdir\=./.gem.20250805-22359-hrot4o clean
+cd libyaml && /Library/Developer/CommandLineTools/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-hrot4o sitelibdir\=./.gem.20250805-22359-hrot4o
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.bundle
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-hrot4o sitelibdir\=./.gem.20250805-22359-hrot4o install
+/usr/bin/install -c -m 0755 psych.bundle ./.gem.20250805-22359-hrot4o
+
+current directory: /Users/adam/projects/agimmo/agimmo_app/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250805-22359-hrot4o sitelibdir\=./.gem.20250805-22359-hrot4o clean
+cd libyaml && /Library/Developer/CommandLineTools/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)
